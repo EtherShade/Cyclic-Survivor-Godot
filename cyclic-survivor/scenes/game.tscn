@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1lm4a0fwmblu"]
+
+[ext_resource type="Script" uid="uid://b4jfmb8atq71c" path="res://scripts/game_swap.gd" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://dpa32l2p6i8wv" path="res://scripts/game_camera.gd" id="2_yqjtg"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_lnu2h")
+
+[node name="game_camera" type="Camera2D" parent="."]
+script = ExtResource("2_yqjtg")
+
+[connection signal="toggled_off_main_menu_scene" from="." to="game_camera" method="_on_game_toggled_off_main_menu_scene"]
+[connection signal="toggled_off_player_scene" from="." to="game_camera" method="_on_game_toggled_off_player_scene"]
+[connection signal="toggled_on_main_menu_scene" from="." to="game_camera" method="_on_game_toggled_on_main_menu_scene"]
+[connection signal="toggled_on_player_scene" from="." to="game_camera" method="_on_game_toggled_on_player_scene"]
+[connection signal="triggered_toggle_editable_world_scene" from="." to="." method="_on_triggered_toggle_editable_world_scene"]
+[connection signal="triggered_toggle_main_menu_scene" from="." to="." method="_on_triggered_toggle_main_menu_scene"]
+[connection signal="triggered_toggle_player_scene" from="." to="." method="_on_triggered_toggle_player_scene"]

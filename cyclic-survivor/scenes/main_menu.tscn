@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cjcxl6agt07md"]
+
+[node name="main_menu" type="Node2D"]
+
+[node name="main_menu_background_structure" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="ColorRect" type="ColorRect" parent="main_menu_background_structure"]
+z_index = -10
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
+
+[node name="main_menu_foreground_structure" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 640.0

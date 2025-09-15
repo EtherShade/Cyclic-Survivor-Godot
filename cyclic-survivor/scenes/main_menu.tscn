@@ -1,14 +1,21 @@
-[gd_scene format=3 uid="uid://cjcxl6agt07md"]
+[gd_scene load_steps=5 format=3 uid="uid://cjcxl6agt07md"]
+
+[ext_resource type="Texture2D" uid="uid://yvije553pn2d" path="res://assets/sprites/main_menu_title_wip.png" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://b1ljeigadv5wv" path="res://assets/sprites/new_game_face_wip.png" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dcfblmo8wu8n4" path="res://assets/sprites/load_game_face_wip.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cnfcn07ctyxeo" path="res://assets/sprites/quit_game_door_wip.png" id="4_wu84c"]
 
 [node name="main_menu" type="Node2D"]
 
 [node name="main_menu_background_structure" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 640.0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = 320.0
 
-[node name="ColorRect" type="ColorRect" parent="main_menu_background_structure"]
+[node name="main_menu_background" type="ColorRect" parent="main_menu_background_structure"]
 z_index = -10
 layout_mode = 1
 anchors_preset = -1
@@ -19,5 +26,57 @@ color = Color(0, 0, 0, 1)
 [node name="main_menu_foreground_structure" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 640.0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = 320.0
+
+[node name="main_menu_title" type="Sprite2D" parent="main_menu_foreground_structure"]
+position = Vector2(576, 160)
+scale = Vector2(10, 10)
+texture = ExtResource("1_ekxnf")
+
+[node name="new_game_button" type="Button" parent="main_menu_foreground_structure"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 320.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 25
+text = "New Game"
+
+[node name="new_game_background" type="Sprite2D" parent="main_menu_foreground_structure/new_game_button"]
+z_index = -1
+position = Vector2(96, 64)
+scale = Vector2(8, 8)
+texture = ExtResource("2_bqqt6")
+
+[node name="load_game_button" type="Button" parent="main_menu_foreground_structure"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 384.0
+offset_right = 1024.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 25
+text = "Load Game"
+
+[node name="load_game_background" type="Sprite2D" parent="main_menu_foreground_structure/load_game_button"]
+z_index = -1
+position = Vector2(96, 64)
+scale = Vector2(8, 8)
+texture = ExtResource("3_bqqt6")
+
+[node name="quit_game_button" type="Button" parent="main_menu_foreground_structure"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 704.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 30
+text = "Quit Game"
+
+[node name="quit_game_background" type="Sprite2D" parent="main_menu_foreground_structure/quit_game_button"]
+z_index = -1
+position = Vector2(128, 64)
+scale = Vector2(8, 8)
+texture = ExtResource("4_wu84c")
